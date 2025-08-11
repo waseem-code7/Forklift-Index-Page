@@ -30,6 +30,11 @@ Auth Database
 <br/>
 Deployments Database
 ![Alt Text](images/deploymentdbschema.png)
+<br/>
+S3 Build Path<br/>
+```
+forklift-builds/{username}/{reponame}/{branch}/{version_id}/
+```
 
 ## Authentication
 The application uses GitHub's OAuth 2.0 flow to securely authenticate users and access their GitHub data. This provides a seamless single sign-on experience while ensuring users maintain control over what data the application can access.
