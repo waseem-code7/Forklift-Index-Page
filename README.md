@@ -8,11 +8,11 @@ Red Arrow Lines: Denotes the request from client to a hosted app say quizzapp.fo
 
 ## Service Repositories
 
-### ForkLift Scheduler [Link](https://github.com/waseem-code7/forklift-scheduler)
+### Forklift Scheduler [Link](https://github.com/waseem-code7/forklift-scheduler)
 The core scheduling service for Forklift. It validates incoming deployment requests and queues valid deployments to AWS SQS for processing.
 
 ### Forklift Deployment [Link](https://github.com/waseem-code7/forklift-deployment)
-This service dynamically launches ECS task containers within the ECS cluster. It also securely stores the GitHub access token in AWS Secrets Manager for access by the ForkLift Builder, and injects all necessary environment variables into the build process.
+This service dynamically launches ECS task containers within the ECS cluster. It also securely stores the GitHub access token in AWS Secrets Manager for access by the Forklift Builder, and injects all necessary environment variables into the build process.
 
 ### Forklift Builder [Link](https://github.com/waseem-code7/forklift-builder-image)
 A Linux-based Docker container responsible for cloning the target repository, validating the codebase, installing dependencies, and building React projects. Upon a successful build, it uploads the output to Amazon S3 and invokes an AWS Lambda function with the build status.
@@ -22,7 +22,7 @@ The container is ephemeral — it shuts down automatically once the build and de
 An AWS Lambda function that validates the outcome of deployment, and updates the relevant databases with the final deployment status.
 
 ### Forklift Reverse Proxy [Link](https://github.com/waseem-code7/forklift-reverse-proxy)
-This service handles client requests for build files. It does not directly access S3; instead, it forwards the request to the ForkLift Scheduler, which streams the required build files back to the client through the reverse proxy.
+This service handles client requests for build files. It does not directly access S3; instead, it forwards the request to the Forklift Scheduler, which streams the required build files back to the client through the reverse proxy.
 
 ## Database Schemas
 Auth Database
