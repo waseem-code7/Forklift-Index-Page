@@ -1,7 +1,7 @@
 ### ⚠️  Note: This is an index page. This project follows a microservice architecture. You can find the links to the individual service repositories below. ⚠️
 
 ## Architecture
-![Alt Text](images/architecture1.png)
+![Alt Text](images/architecture_2.png)
 
 Black Arrow Lines: Denotes the deployment process<br/>
 Red Arrow Lines: Denotes the request from client to a hosted app say quizzapp.forklift.com<br/>
