@@ -27,10 +27,10 @@ This service handles client requests for build files. It does not directly acces
 ## Database Schemas
 Auth Database
 ![Alt Text](images/authdbschema.png)
-<br/>
+<br/><br/>
 Deployments Database
 ![Alt Text](images/deploymentdbschema.png)
-<br/>
+<br/><br/>
 S3 Build Path<br/>
 ```
 forklift-builds/{username}/{reponame}/{branch}/{version_id}/
