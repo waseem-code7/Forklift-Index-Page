@@ -14,7 +14,7 @@ The core scheduling service for Forklift. It validates incoming deployment reque
 ### Forklift Deployment [Link](https://github.com/waseem-code7/forklift-deployment)
 This service dynamically launches ECS task containers within the ECS cluster. It also securely stores the GitHub access token in AWS Secrets Manager for access by the ForkLift Builder, and injects all necessary environment variables into the build process.
 
-### Forklift Builder [Link](https://github.com/waseem-code7/forklift-builder)
+### Forklift Builder [Link](https://github.com/waseem-code7/forklift-builder-image)
 A Linux-based Docker container responsible for cloning the target repository, validating the codebase, installing dependencies, and building React projects. Upon a successful build, it uploads the output to Amazon S3 and invokes an AWS Lambda function with the build status.
 The container is ephemeral — it shuts down automatically once the build and deployment process is completed.
 
